@@ -1,0 +1,1 @@
+{"input_domain": [0, 1], "resume_policy_path": null, "forward_with_budget": false, "name": "basic_continuous_gp_al_policy_config", "input_dim": 1, "observation_dim": 1, "hidden_dim_encoder": [512], "encoding_dim": 128, "hidden_dim_emitter": [512], "num_self_attention_layer": 2, "domain_warpper": 2, "device": "cuda"}

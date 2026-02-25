@@ -1,0 +1,1 @@
+{"batch_size": 10, "num_kernels": 10, "num_functions_per_kernel": 5, "num_splits": 5, "num_epochs": 200, "epochs_size": 50, "name": "E[  log p(y|y_init) - log p(y|y_grid, y_init)  ]", "num_grid_points": 500}

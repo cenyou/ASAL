@@ -1,0 +1,1 @@
+{"input_dimension": 2, "name": "RBFwithPrior", "active_on_single_dimension": false, "active_dimension": 0, "base_lengthscale": [0.9, 0.6], "base_variance": 1.0, "add_prior": true, "lengthscale_prior_parameters": [2.0, 2.0], "variance_prior_parameters": [2.0, 3.0]}

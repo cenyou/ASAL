@@ -1,0 +1,1 @@
+{"batch_shape": [], "name": "SechMean", "input_dimension": 5, "center": 0.5, "weights": 20.0, "scale": 3.2, "bias": -0.47, "center_prior": null, "weights_prior": [1, [5, 40]], "scale_prior": null, "bias_prior": null}

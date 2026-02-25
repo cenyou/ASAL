@@ -1,0 +1,1 @@
+{"probability_function": 4, "probability_function_args": [0.05, 0.0], "probability_wrap_mode": 3, "safety_discount_ratio": 1.0, "batch_size": 1, "num_kernels": 10, "num_functions_per_kernel": 5, "num_splits": 1, "num_epochs": 200, "epochs_size": 50, "name": "E[  log p(y|y_init)  +  log_unsafe_prob  ]"}

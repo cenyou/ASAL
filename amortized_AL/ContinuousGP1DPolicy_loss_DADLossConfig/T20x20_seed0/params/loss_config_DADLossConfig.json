@@ -1,0 +1,1 @@
+{"batch_size": 10, "num_kernels": 10, "num_functions_per_kernel": 200, "num_splits": 1, "num_epochs": 400, "epochs_size": 50, "name": "dad_loss"}

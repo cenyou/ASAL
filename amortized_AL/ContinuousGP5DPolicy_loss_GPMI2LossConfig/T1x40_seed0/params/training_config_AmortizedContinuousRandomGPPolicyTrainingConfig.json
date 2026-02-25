@@ -1,0 +1,1 @@
+{"optim_args": {"lr": 0.0001}, "gamma": 0.98, "n_initial": 20, "n_steps": 40, "n_steps_per_run": null, "sample_gp_prior": true, "random_subsequence": true, "split_subsequence": false}
