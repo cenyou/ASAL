@@ -105,7 +105,8 @@ See Appendix Table S.F.4 for recommended settings.
 **Loss function options:**
 | Loss Config | Description |
 |-------------|-------------|
-| `GPMI2LossConfig` | $\mathcal{I}_{\text{mean}}$ (default) |
+| `GPMI2LossConfig` | $\mathcal{I}$ (default) |
+| `GPMI1LossConfig` | $\mathcal{I}_{\text{mean}}$ |
 | `GPEntropy2LossConfig` | $\mathcal{H}$ |
 | `GPEntropy1LossConfig` | $\mathcal{H}_{\text{mean}}$ |
 
@@ -140,6 +141,7 @@ See Appendix Table S.F.4 for recommended `(D, N_init, T)` settings.
 **Ablation loss configs:**
 | Loss Config | Description |
 |-------------|-------------|
+| `MinUnsafeGPEntropy2LossConfig` | $\mathcal{S}_{\mathcal{H}}$ (default) |
 | `MinUnsafeGPEntropy1LossConfig` | $\mathcal{S}_{\mathcal{H}_{\text{mean}}}$ |
 | `SafeGPEntropy2LossConfig` | $\mathcal{S}_{\mathcal{H}, \text{division}}$ |
 | `SafeGPEntropy1LossConfig` | $\mathcal{S}_{\mathcal{H}_{\text{mean}}, \text{division}}$ |
@@ -161,6 +163,19 @@ pip install -e .
 git checkout main
 ```
 
+---
+Download Pretrained Policies and PFNs
+
+Clone this `ASAL` repository and copy the models to `EXPERIMENT_PATH`:
+
+| Source | Destination |
+|--------|-------------|
+| [./amortized_AL](./amortized_AL) | `EXPERIMENT_PATH/amortized_AL` |
+| [./pfns](./pfns) | `EXPERIMENT_PATH/pfns` |
+| [./ALINE](./ALINE) | `EXPERIMENT_PATH/ALINE` |
+
+> **Note:** This repository uses [Git LFS](https://github.com/git-lfs/git-lfs) to store large model files. Make sure to install Git LFS and run `git lfs pull` after cloning to download the pretrained weights.
+
 ### 2. Install Amortized GP Baseline
 
 ```bash
@@ -171,6 +186,7 @@ conda activate alef
 pip install -e .
 ```
 
+---
 Download the pretrained weights:
 ```bash
 cd $EXPERIMENT_PATH
@@ -178,19 +194,7 @@ git clone https://github.com/boschresearch/Amor-Struct-GP-pretrained-weights
 ```
 Model path: `EXPERIMENT_PATH/Amor-Struct-GP-pretrained-weights/main_state_dict_paper.pth`
 
-### 3. Download Pretrained Policies and PFNs
-
-Clone this repository and copy the models to `EXPERIMENT_PATH`:
-
-| Source | Destination |
-|--------|-------------|
-| [./amortized_AL](./amortized_AL) | `EXPERIMENT_PATH/amortized_AL` |
-| [./pfns](./pfns) | `EXPERIMENT_PATH/pfns` |
-| [./ALINE](./ALINE) | `EXPERIMENT_PATH/ALINE` |
-
-> **Note:** This repository uses [Git LFS](https://github.com/git-lfs/git-lfs) to store large model files. Make sure to install Git LFS and run `git lfs pull` after cloning to download the pretrained weights.
-
-### 4. Download Datasets
+### 3. Download Datasets
 
 | Dataset | Source | Destination |
 |---------|--------|-------------|
@@ -204,6 +208,7 @@ Clone this repository and copy the models to `EXPERIMENT_PATH`:
 ### Using `alef` environment
 
 ```bash
+cd your/path/active-learning-framework
 conda activate alef
 ```
 
@@ -225,6 +230,7 @@ conda activate alef
 ### Using `asal-tabpfn` environment
 
 ```bash
+cd your/path/active-learning-framework
 git checkout tabpfn
 conda activate asal-tabpfn
 ```
